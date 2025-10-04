@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Tính Tổng</title>
+</head>
+<body>
+    <h2>Nhập 2 số để tính tổng</h2>
+    <form th:action="@{/sum/calc}" method="post">
+        <label>Số a:</label>
+        <input type="number" step="any" name="a" required
+               th:value="${a}"><br><br>
+
+        <label>Số b:</label>
+        <input type="number" step="any" name="b" required
+               th:value="${b}"><br><br>
+
+        <button type="submit">Tính tổng</button>
+    </form>
+
+    <h3 th:if="${result != null}">
+        Kết quả: <span th:text="${a}"></span> + 
+                 <span th:text="${b}"></span> = 
+                 <span th:text="${result}"></span>
+    </h3>
+</body>
+</html>

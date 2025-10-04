@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 2 - ParamController</title>
+</head>
+<body>
+    <h2>Form nhập thông tin</h2>
+    <form action="/save" method="post">
+        Họ tên: <input type="text" name="name"> <br><br>
+        Tuổi: <input type="number" name="age"> <br><br>
+        <button type="submit">Gửi</button>
+    </form>
+
+    <hr>
+    <h3>Kết quả:</h3>
+    <p>Họ tên: <span th:text="${name}"></span></p>
+    <p>Tuổi: <span th:text="${age}"></span></p>
+
+    <hr>
+    <h3>Test với @PathVariable</h3>
+    <p>Ví dụ: <a href="/param/NguyenVanA/20">/param/NguyenVanA/20</a></p>
+</body>
+</html>
